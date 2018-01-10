@@ -1,4 +1,9 @@
 body{
 	-ms-flex-negative: 1;
 	    flex-shrink: 1;
+	color: #252440;
 }
+
+	body a{
+		color: #000;
+	}

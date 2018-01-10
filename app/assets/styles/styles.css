@@ -1,0 +1,11 @@
+$blue_var : #252440;
+$black : #000;
+
+body{
+	flex-shrink: 1;
+	color: $blue_var;
+
+	a{
+		color: $black;
+	}
+}
