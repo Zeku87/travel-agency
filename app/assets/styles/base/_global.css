@@ -1,9 +1,13 @@
 body{
 	font-family: "Roboto", sans-serif;
-	color: #333; 
+	color: $darkGray; 
 }
 
 img{
 	width:100%;
 	height: auto;
+}
+
+a{
+	text-decoration: none;
 }

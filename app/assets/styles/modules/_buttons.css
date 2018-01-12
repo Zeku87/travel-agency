@@ -1,0 +1,35 @@
+.button{
+	position: relative;
+	background-color: $mainBlue;
+	color: white;
+	padding: 1rem;
+	box-shadow: 2px 2px $darkGrayTrans;
+	outline: none;
+
+	&:hover{
+		background-color: $accentOrange;
+	}
+
+	&:active{
+		background-color: $accentOrange;
+		
+		top:2px;
+		left: 2px;
+		box-shadow: 0px 0px $darkGrayTrans;
+	}
+
+	&__orange{
+		background-color: $accentOrange;
+	}
+
+	&__orange:hover{
+		background-color: $mainBlue;
+		color: white;
+	}
+
+	&__orange:active{
+		background-color: $mainBlue;
+		color: white;
+	}
+
+}
