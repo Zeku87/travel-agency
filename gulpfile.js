@@ -34,6 +34,14 @@ gulp.task('watch', () => {
 	});
 
 	watch('./app/assets/styles/**/*.css', () => {
-		gulp.start('css');
+		gulp.start('cssInject');
 	});
+});
+
+//css changes injected on the fly into the browser
+//so the server of browserSync has not to reload
+//This tasks depends on 'css' task
+gulp.task('cssInject', ['css'], () =>{
+	return gulp.src('./app/temp/styles/styles.css')
+		.pipe(browserSync.stream());
 });
