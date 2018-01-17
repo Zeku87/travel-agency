@@ -1,13 +1,14 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const cssvars = require('postcss-simple-vars');
-const cssnested = require('postcss-nested');
+const vars = require('postcss-simple-vars');
+const nested = require('postcss-nested');
 const cssImport = require('postcss-import');
+const mixins = require('postcss-mixins');
 
 gulp.task('css', () => {
 	return gulp.src('./app/assets/styles/styles.css')
-	.pipe(postcss([cssImport, autoprefixer, cssvars, cssnested]))
+	.pipe(postcss([cssImport, mixins, autoprefixer, vars, nested]))
 	.on('error', (error) => {
 		console.error(error.toString());
 	})
